@@ -1,7 +1,5 @@
-import { DadosType } from '../types/DadosType';
 import { inputs } from '../utils/inputList';
 import { defineDiasRestantesMes } from './defineDiasRestantesMes';
-import { getDados } from './getDados';
 
 function defineDiasRestantesSemana(): number {
   const diasRestantesMes = defineDiasRestantesMes();

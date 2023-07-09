@@ -1,5 +1,4 @@
 import { inputs } from '../utils/inputList';
-import { defineMetaDia } from './defineMetaDia';
 
 export function calcSemana() {
   const vendaSemana = Number(inputs.vendaSemanaIpt.value);
