@@ -1,4 +1,5 @@
 import { calcDia } from './functions/calcDia';
+import { checkWeek } from './functions/checkWeek';
 import { defineCalcs } from './functions/defineCalcs';
 import { defineData } from './functions/defineData';
 import { defineInitValues } from './functions/defineInitValues';
@@ -12,6 +13,7 @@ import { inputs } from './utils/inputList';
 defineInitValues();
 defineData();
 defineCalcs();
+checkWeek();
 
 inputs.metaSemanaIpt.addEventListener('blur', () => {
   defineMetaDia();
