@@ -15,6 +15,7 @@ function newWeek() {
   inputs.vendaSemanaIpt.value = '';
   inputs.efetivaSemanaIpt.value = '';
   inputs.metaDiaIpt.value = '';
+  inputs.faltaMetaIpt.value = '';
 }
 
 export function checkWeek() {
