@@ -1,10 +1,12 @@
-import { DadosType } from '../types/DadosType';
-import { inputs } from '../utils/inputList';
+import { DadosType } from '../../types/DadosType';
+import { inputs } from '../../utils/inputList';
+import { defineDataIpt } from './defineDataIpt';
+import { getDados } from '../general/getDados';
 import { defineMetaDia } from './defineMetaDia';
-import { getDados } from './getDados';
 
 export function defineInitValues() {
   const dados: DadosType = getDados();
+  defineDataIpt();
 
   inputs.rotaSapIpt.value = String(dados.rotaSap);
   inputs.efetivaSemanaIpt.value = String(dados.efetivasSemana);

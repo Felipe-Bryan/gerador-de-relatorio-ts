@@ -1,5 +1,5 @@
-import { DadosType } from '../types/DadosType';
-import { inputs } from '../utils/inputList';
+import { DadosType } from '../../types/DadosType';
+import { inputs } from '../../utils/inputList';
 import { getDados } from './getDados';
 
 function newWeek() {

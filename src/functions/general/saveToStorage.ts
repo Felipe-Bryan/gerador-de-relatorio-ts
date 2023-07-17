@@ -1,6 +1,6 @@
-import { DadosType } from '../types/DadosType';
-import { inputs } from '../utils/inputList';
-import { meses } from '../utils/meses';
+import { DadosType } from '../../types/DadosType';
+import { inputs } from '../../utils/inputList';
+import { defineMes } from '../defines/defineMes';
 
 export function saveToStorage() {
   const rotaSap = Number(inputs.rotaSapIpt.value);
@@ -14,7 +14,7 @@ export function saveToStorage() {
   const tel = Number(inputs.telIpt.value);
 
   const dadosRota: DadosType = {
-    mes: Number(meses[new Date().getMonth()]),
+    mes: Number(defineMes()),
     rotaSap,
     efetivasSemana,
     metaDia,

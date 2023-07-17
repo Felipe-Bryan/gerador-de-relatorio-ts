@@ -1,8 +1,9 @@
-import { meses } from '../utils/meses';
+import { defineDia } from './defineDia';
+import { defineMes } from './defineMes';
 
 export function defineDiasMes(): number {
-  const dia = new Date().getDate();
-  const mes = meses[new Date().getMonth()];
+  const dia = defineDia();
+  const mes = defineMes();
   let anoBissexto: boolean = false;
 
   let anoAtual = new Date().getFullYear();
