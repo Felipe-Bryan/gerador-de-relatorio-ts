@@ -17,5 +17,5 @@ export function defineMetaDia() {
 
   const metaDia = metaSemana / diasRestantes;
 
-  inputs.metaDiaIpt.value = String(metaDia);
+  inputs.metaDiaIpt.value = metaDia.toFixed(0);
 }
