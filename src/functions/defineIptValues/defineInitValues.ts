@@ -3,6 +3,7 @@ import { inputs } from '../../utils/inputList';
 import { defineDataIpt } from './defineDataIpt';
 import { getDados } from '../general/getDados';
 import { defineMetaDia } from './defineMetaDia';
+import { defineFaltaMeta } from './defineFaltaMeta';
 
 export function defineInitValues() {
   const dados: DadosType = getDados();
@@ -16,7 +17,8 @@ export function defineInitValues() {
   inputs.metaMesIpt.value = String(dados.metaMes);
   inputs.dddIpt.value = String(dados.ddd);
   inputs.telIpt.value = String(dados.tel);
-  inputs.faltaMetaIpt.value = String(Number(inputs.metaSemanaIpt.value) - Number(inputs.vendaSemanaIpt.value));
+
+  defineFaltaMeta();
 
   defineMetaDia();
 }
