@@ -6,11 +6,12 @@ import { getDados } from '../general/getDados';
 export function defineMetaDia() {
   const dados: DadosType = getDados();
   const diasRestantes = defineDiasRestantesSemana();
+  const newMetaSemana = Number(inputs.metaSemanaIpt.value);
 
   let metaSemana: number;
 
-  if (dados.metaSemana == 0) {
-    metaSemana = Number(inputs.metaSemanaIpt.value);
+  if (dados.metaSemana !== newMetaSemana) {
+    metaSemana = newMetaSemana;
   } else {
     metaSemana = dados.metaSemana;
   }
