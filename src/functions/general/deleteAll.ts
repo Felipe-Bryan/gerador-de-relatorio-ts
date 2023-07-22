@@ -1,9 +1,10 @@
 export function deleteAll() {
   let confirmation = confirm(
-    'Essa operação irá deletar todos os dados salvos e não poder ser desfeita\nDeseja prosseguir?'
+    'Essa operação irá deletar todos os dados salvos e não poderá ser desfeita\nDeseja prosseguir?'
   );
+
   if (confirmation) {
-    localStorage.removeItem('infos');
+    localStorage.removeItem('dadosRota');
     location.reload();
   }
 }

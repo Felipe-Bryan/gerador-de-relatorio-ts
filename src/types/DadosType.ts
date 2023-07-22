@@ -4,9 +4,11 @@ export interface DadosType {
   efetivasSemana: number;
   vendaSemana: number;
   vendaMes: number;
-  metaDia: number;
   metaSemana: number;
   metaMes: number;
   ddd: number;
   tel: number;
+  programadas: number;
+  efetivasDR: number;
+  efetivasFR: number;
 }

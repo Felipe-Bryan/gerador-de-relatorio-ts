@@ -1,5 +1,7 @@
+import { DadosType } from '../../types/DadosType';
+
 export function getDados() {
-  let info = JSON.parse(localStorage.getItem('dadosRota') || '{}');
+  let info: DadosType = JSON.parse(localStorage.getItem('dadosRota') || '{}');
 
   if (!info.rotaSap) {
     info = {
@@ -8,11 +10,13 @@ export function getDados() {
       efetivasSemana: 0,
       vendaSemana: 0,
       vendaMes: 0,
-      metaDia: 0,
       metaSemana: 0,
       metaMes: 0,
       ddd: 0,
       tel: 0,
+      efetivasDR: 0,
+      efetivasFR: 0,
+      programadas: 0,
     };
   }
 
