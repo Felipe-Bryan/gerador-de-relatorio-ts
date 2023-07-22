@@ -1,8 +1,6 @@
-import { defineDia } from './defineDia';
 import { defineMes } from './defineMes';
 
 export function defineDiasMes(): number {
-  const dia = defineDia();
   const mes = defineMes();
   let anoBissexto: boolean = false;
 
