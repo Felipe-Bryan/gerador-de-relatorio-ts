@@ -39,9 +39,9 @@ Rota: BR${inputs.rotaSapIpt.value}
 
 \u{1F195} *POSIT. INCENTIVO* \u{1F4AF}
 \u{1F4CB}\u{1F4C8}
-*Panetini:* ${inputs.positFoco1Ipt.value}
-*Torcida:* ${inputs.positFoco2Ipt.value}
-*Amendoim:* ${inputs.positFoco3Ipt.value}
+*Lays Rústica:* ${inputs.positFoco1Ipt.value}
+*Ruffles Lanchonete:* ${inputs.positFoco2Ipt.value}
+*Cheetos Bola:* ${inputs.positFoco3Ipt.value}
 
 \u{1F449} *META semana:* R$ ${Number(inputs.metaSemanaIpt.value).toLocaleString('pt-BR', {
     style: 'decimal',
