@@ -39,8 +39,8 @@ Rota: BR${inputs.rotaSapIpt.value}
 
 \u{27A1} *FATURAMENTO*
 \u{2705} *PDB:* ${generateValue(inputs.metaMesIpt)}
-*Meta /dia* : R$ ${generateValue(inputs.metaDiaIpt)}
-*VENDA /DIA* : R$ ${generateValue(inputs.vendaDiaIpt)}
+*Meta /dia* : ${generateValue(inputs.metaDiaIpt)}
+*VENDA /DIA* : ${generateValue(inputs.vendaDiaIpt)}
 *perc.%:* ${generatePercent(inputs.porcentDiaIpt)}
 
 \u{27A1} *EFETIVAS*
@@ -57,10 +57,10 @@ Rota: BR${inputs.rotaSapIpt.value}
 *Levinho:* ${inputs.positFoco4Ipt.value}
 
 \u{1F449} *META semana:* ${generateValue(inputs.metaSemanaIpt)}
-\u{1F449} *Real semana:* R$ ${generateValue(inputs.vendaSemanaAtualIpt)}
+\u{1F449} *Real semana:* ${generateValue(inputs.vendaSemanaAtualIpt)}
 \u{2705} *% Objetivo semana:* ${generatePercent(inputs.porcentSemanaIpt)}
 \u{1F449} *Falta p/ Meta semana:* ${generateValue(inputs.faltaMetaIpt)}
-\u{1F449} *Real mês:*${generateValue(inputs.vendaMesAtualIpt)}`;
+\u{1F449} *Real mês:* ${generateValue(inputs.vendaMesAtualIpt)}`;
 
   inputs.textoIpt.value = texto;
   defineLink();
