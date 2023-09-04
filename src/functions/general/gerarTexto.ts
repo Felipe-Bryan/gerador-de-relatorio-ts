@@ -1,6 +1,30 @@
 import { inputs } from '../../utils/inputList';
 import { defineLink } from '../defines/defineLink';
 
+function generateValue(input: any) {
+  const value = Number(input.value);
+
+  if (value >= 1) {
+    return `R$ ${value.toLocaleString('pt-BR', {
+      style: 'decimal',
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })}`;
+  } else {
+    return `-`;
+  }
+}
+
+function generatePercent(input: any) {
+  const value = Number(input.value);
+
+  if (value >= 0.01) {
+    return `${value}%`;
+  }
+
+  return '-';
+}
+
 export function gerarTexto() {
   let efetivaTotalText;
 
@@ -14,27 +38,15 @@ export function gerarTexto() {
 Rota: BR${inputs.rotaSapIpt.value}
 
 \u{27A1} *FATURAMENTO*
-\u{2705} *PDB:* ${Number(inputs.metaMesIpt.value).toLocaleString('pt-BR', {
-    style: 'decimal',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  })}
-*Meta /dia* : R$ ${Number(inputs.metaDiaIpt.value).toLocaleString('pt-BR', {
-    style: 'decimal',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  })}
-*VENDA /DIA* : R$ ${Number(inputs.vendaDiaIpt.value).toLocaleString('pt-BR', {
-    style: 'decimal',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  })}
-*perc.%:* ${inputs.porcentDiaIpt.value}%
+\u{2705} *PDB:* ${generateValue(inputs.metaMesIpt)}
+*Meta /dia* : R$ ${generateValue(inputs.metaDiaIpt)}
+*VENDA /DIA* : R$ ${generateValue(inputs.vendaDiaIpt)}
+*perc.%:* ${generatePercent(inputs.porcentDiaIpt)}
 
 \u{27A1} *EFETIVAS*
 *Progr/dia* : ${inputs.programadasIpt.value}
 *Realiz/dia* : ${efetivaTotalText}
-*prod%:* ${inputs.porcentEfetIpt.value}%
+*prod%:* ${generatePercent(inputs.porcentEfetIpt)}
 *Total efetivas semana:* ${inputs.efetivaSemanaIpt.value}
 
 \u{1F195} *POSIT. INCENTIVO* \u{1F4AF}
@@ -44,27 +56,11 @@ Rota: BR${inputs.rotaSapIpt.value}
 *Cheetos Bola:* ${inputs.positFoco3Ipt.value}
 *Levinho:* ${inputs.positFoco4Ipt.value}
 
-\u{1F449} *META semana:* R$ ${Number(inputs.metaSemanaIpt.value).toLocaleString('pt-BR', {
-    style: 'decimal',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  })}
-\u{1F449} *Real semana:* R$ ${Number(inputs.vendaSemanaAtualIpt.value).toLocaleString('pt-BR', {
-    style: 'decimal',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  })}
-\u{2705} *% Objetivo semana:* ${inputs.porcentSemanaIpt.value}%
-\u{1F449} *Falta p/ Meta semana:* R$ ${Number(inputs.faltaMetaIpt.value).toLocaleString('pt-BR', {
-    style: 'decimal',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  })}
-\u{1F449} *Real mês:* R$ ${Number(inputs.vendaMesAtualIpt.value).toLocaleString('pt-BR', {
-    style: 'decimal',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  })}`;
+\u{1F449} *META semana:* ${generateValue(inputs.metaSemanaIpt)}
+\u{1F449} *Real semana:* R$ ${generateValue(inputs.vendaSemanaAtualIpt)}
+\u{2705} *% Objetivo semana:* ${generatePercent(inputs.porcentSemanaIpt)}
+\u{1F449} *Falta p/ Meta semana:* ${generateValue(inputs.faltaMetaIpt)}
+\u{1F449} *Real mês:*${generateValue(inputs.vendaMesAtualIpt)}`;
 
   inputs.textoIpt.value = texto;
   defineLink();
