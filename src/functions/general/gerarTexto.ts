@@ -42,6 +42,7 @@ Rota: BR${inputs.rotaSapIpt.value}
 *Lays Rústica:* ${inputs.positFoco1Ipt.value}
 *Ruffles Lanchonete:* ${inputs.positFoco2Ipt.value}
 *Cheetos Bola:* ${inputs.positFoco3Ipt.value}
+*Levinho:* ${inputs.positFoco4Ipt.value}
 
 \u{1F449} *META semana:* R$ ${Number(inputs.metaSemanaIpt.value).toLocaleString('pt-BR', {
     style: 'decimal',

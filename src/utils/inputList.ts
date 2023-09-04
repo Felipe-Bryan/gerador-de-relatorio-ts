@@ -12,6 +12,7 @@ export const inputs = {
   positFoco1Ipt: <HTMLInputElement>document.getElementById('positFoco1'),
   positFoco2Ipt: <HTMLInputElement>document.getElementById('positFoco2'),
   positFoco3Ipt: <HTMLInputElement>document.getElementById('positFoco3'),
+  positFoco4Ipt: <HTMLInputElement>document.getElementById('positFoco4'),
   metaSemanaIpt: <HTMLInputElement>document.getElementById('metaSemana'),
   vendaSemanaIpt: <HTMLInputElement>document.getElementById('vendaSemana'),
   vendaSemanaAtualIpt: <HTMLInputElement>document.getElementById('vendaSemanaAtual'),
