@@ -1,9 +1,11 @@
+import { defineDia } from './defineDia';
 import { defineDiaSemana } from './defineDiaSemana';
 import { defineDiasRestantesMes } from './defineDiasRestantesMes';
 
 export function defineDiasRestantesSemana(): number {
   const diasRestantesMes = defineDiasRestantesMes();
   const diaSemana = defineDiaSemana();
+  const diaMes = defineDia();
 
   let dias = 1;
 
@@ -25,7 +27,11 @@ export function defineDiasRestantesSemana(): number {
 
   if (diasRestantesMes >= 5) {
     return dias;
-  } else {
-    return diasRestantesMes;
   }
+
+  if (diaMes === 27 || diaMes === 28) {
+    return dias;
+  }
+
+  return diasRestantesMes;
 }
