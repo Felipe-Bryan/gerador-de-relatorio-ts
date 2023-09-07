@@ -1,6 +1,6 @@
 import { DadosType } from '../../types/DadosType';
 
-export function getDados() {
+export function getDados(): DadosType {
   let info: DadosType = JSON.parse(localStorage.getItem('dadosRota') || '{}');
 
   if (!info.rotaSap) {
