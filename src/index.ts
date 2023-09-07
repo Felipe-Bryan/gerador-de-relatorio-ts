@@ -1,4 +1,3 @@
-// import { inputs } from './utils/inputList';
 import { defineInitValues } from './functions/defineIptValues/defineInitValues';
 import { defineCalcs } from './functions/defines/defineCalcs';
 import { defineLink } from './functions/defines/defineLink';
@@ -12,24 +11,16 @@ defineInitValues();
 checkInit();
 defineCalcs();
 
-const btnSubmit = document.getElementById('btnSubmit');
+document.getElementById('btnSubmit')!.addEventListener('click', (e) => {
+  e.preventDefault();
+  gerarTexto();
+  saveToStorage();
+});
 
-if (btnSubmit) {
-  btnSubmit.addEventListener('click', (e) => {
-    e.preventDefault();
-    gerarTexto();
-    saveToStorage();
-  });
-}
-
-const btnReset = document.getElementById('btnReset');
-
-if (btnReset) {
-  btnReset.addEventListener('click', (e) => {
-    e.preventDefault();
-    deleteAll();
-  });
-}
+document.getElementById('btnReset')!.addEventListener('click', (e) => {
+  e.preventDefault();
+  deleteAll();
+});
 
 inputs.textoIpt.addEventListener('change', () => {
   defineLink();
