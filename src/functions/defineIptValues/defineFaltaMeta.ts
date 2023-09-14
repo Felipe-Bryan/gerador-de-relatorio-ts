@@ -13,5 +13,5 @@ export function defineFaltaMeta(): void {
 
   const faltaMeta: number = metaSemana - vendaSemana;
 
-  inputs.faltaMetaIpt.value = faltaMeta.toFixed(2);
+  inputs.faltaMetaIpt.value = String(faltaMeta);
 }
