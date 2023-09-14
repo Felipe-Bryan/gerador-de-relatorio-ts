@@ -4,6 +4,7 @@ import { defineDataIpt } from './defineDataIpt';
 import { getDados } from '../general/getDados';
 import { defineMetaDia } from './defineMetaDia';
 import { defineFaltaMeta } from './defineFaltaMeta';
+import { defineMetaSemana } from '../defines/defineMetaSemana';
 
 export function defineInitValues() {
   const dados: DadosType = getDados();
@@ -17,6 +18,8 @@ export function defineInitValues() {
   inputs.metaMesIpt.value = String(dados.metaMes);
   inputs.dddIpt.value = String(dados.ddd);
   inputs.telIpt.value = String(dados.tel);
+
+  defineMetaSemana();
 
   defineFaltaMeta();
 
