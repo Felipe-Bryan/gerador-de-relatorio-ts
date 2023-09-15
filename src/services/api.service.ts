@@ -8,5 +8,7 @@ const api = axios.create({
 export const createVendaApi = (params: CreateVendaParams) => {
   api.post('/', params).then((res) => {
     console.log(res.data.data);
+
+    return res.data.data;
   });
 };
