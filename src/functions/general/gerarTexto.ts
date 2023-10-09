@@ -52,8 +52,8 @@ Rota: BR${inputs.rotaSapIpt.value}
 \u{1F195} *POSIT. INCENTIVO* \u{1F4AF}
 \u{1F4CB}\u{1F4C8}
 *Lays Rústica:* ${inputs.positFoco1Ipt.value}
-*Ruffles Lanchonete:* ${inputs.positFoco2Ipt.value}
-*Cheetos Bola:* ${inputs.positFoco3Ipt.value}
+*Crunchy Super:* ${inputs.positFoco2Ipt.value}
+*Crunchy White:* ${inputs.positFoco3Ipt.value}
 *Levinho:* ${inputs.positFoco4Ipt.value}
 
 \u{1F449} *META semana:* ${generateValue(inputs.metaSemanaIpt)}
